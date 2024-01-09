@@ -1,10 +1,10 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
-#include "PuzzlePlatformsGameMode.h"
-#include "PuzzlePlatformsCharacter.h"
+#include "Unreal_steamGameMode.h"
+#include "Unreal_steamCharacter.h"
 #include "UObject/ConstructorHelpers.h"
 
-APuzzlePlatformsGameMode::APuzzlePlatformsGameMode()
+AUnreal_steamGameMode::AUnreal_steamGameMode()
 {
 	// set default pawn class to our Blueprinted character
 	static ConstructorHelpers::FClassFinder<APawn> PlayerPawnBPClass(TEXT("/Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter"));

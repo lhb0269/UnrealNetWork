@@ -3,13 +3,13 @@
 using UnrealBuildTool;
 using System.Collections.Generic;
 
-public class PuzzlePlatformsTarget : TargetRules
+public class Unreal_steamTarget : TargetRules
 {
-	public PuzzlePlatformsTarget(TargetInfo Target) : base(Target)
+	public Unreal_steamTarget(TargetInfo Target) : base(Target)
 	{
 		Type = TargetType.Game;
 		DefaultBuildSettings = BuildSettingsVersion.V4;
 		IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_3;
-		ExtraModuleNames.Add("PuzzlePlatforms");
+		ExtraModuleNames.Add("Unreal_steam");
 	}
 }

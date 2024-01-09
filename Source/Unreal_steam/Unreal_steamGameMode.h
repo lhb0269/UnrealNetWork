@@ -4,15 +4,15 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
-#include "PuzzlePlatformsGameMode.generated.h"
+#include "Unreal_steamGameMode.generated.h"
 
 UCLASS(minimalapi)
-class APuzzlePlatformsGameMode : public AGameModeBase
+class AUnreal_steamGameMode : public AGameModeBase
 {
 	GENERATED_BODY()
 
 public:
-	APuzzlePlatformsGameMode();
+	AUnreal_steamGameMode();
 };
 
 
