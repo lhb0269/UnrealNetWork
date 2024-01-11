@@ -128,7 +128,7 @@ void AUnreal_steamCharacter::OnCreateSessionComplete(FName SessionName, bool bWa
 {
 	if (bWasSuccessful)
 	{
-		if (GEngine)
+		/*if (GEngine)
 		{
 			GEngine->AddOnScreenDebugMessage(
 				-1,
@@ -136,7 +136,7 @@ void AUnreal_steamCharacter::OnCreateSessionComplete(FName SessionName, bool bWa
 				FColor::Blue,
 				FString::Printf(TEXT("Created session: %s"), *SessionName.ToString())
 			);
-		}
+		}*/
 
 		UWorld* World = GetWorld();
 		if (World)
@@ -146,7 +146,7 @@ void AUnreal_steamCharacter::OnCreateSessionComplete(FName SessionName, bool bWa
 	}
 	else
 	{
-		if (GEngine)
+		/*if (GEngine)
 		{
 			GEngine->AddOnScreenDebugMessage(
 				-1,
@@ -154,7 +154,7 @@ void AUnreal_steamCharacter::OnCreateSessionComplete(FName SessionName, bool bWa
 				FColor::Red,
 				FString(TEXT("Failed to create session!"))
 			);
-		}
+		}*/
 	}
 }
 
@@ -173,16 +173,16 @@ void AUnreal_steamCharacter::OnFindSessionsComplete(bool bWasSuccessful)
 		Result.Session.SessionSettings.Get(FName("MatchType"), MatchType);
 		if (GEngine)
 		{
-			GEngine->AddOnScreenDebugMessage(
+			/*GEngine->AddOnScreenDebugMessage(
 				-1,
 				15.f,
 				FColor::Cyan,
 				FString::Printf(TEXT("Id: %s, User: %s"), *Id, *User)
-			);
+			);*/
 		}
 		if (MatchType == FString("FreeForAll"))
 		{
-			if (GEngine)
+			/*if (GEngine)
 			{
 				GEngine->AddOnScreenDebugMessage(
 					-1,
@@ -190,7 +190,7 @@ void AUnreal_steamCharacter::OnFindSessionsComplete(bool bWasSuccessful)
 					FColor::Cyan,
 					FString::Printf(TEXT("Joining Match Type: %s"), *MatchType)
 				);
-			}
+			}*/
 
 			OnlineSessionInterface->AddOnJoinSessionCompleteDelegate_Handle(JoinSessionCompleteDelegate);
 
@@ -209,7 +209,7 @@ void AUnreal_steamCharacter::OnJoinSessionComplete(FName SessionName, EOnJoinSes
 	FString Address;
 	if (OnlineSessionInterface->GetResolvedConnectString(NAME_GameSession, Address))
 	{
-		if (GEngine)
+		/*if (GEngine)
 		{
 			GEngine->AddOnScreenDebugMessage(
 				-1,
@@ -217,7 +217,7 @@ void AUnreal_steamCharacter::OnJoinSessionComplete(FName SessionName, EOnJoinSes
 				FColor::Yellow,
 				FString::Printf(TEXT("Connect string: %s"), *Address)
 			);
-		}
+		}*/
 
 		APlayerController* PlayerController = GetGameInstance()->GetFirstLocalPlayerController();
 		if (PlayerController)
