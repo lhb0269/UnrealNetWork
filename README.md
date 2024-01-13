@@ -7,3 +7,9 @@
 1. 화면상의 Host 버튼 클릭 하면 세션 생성
 2. 참가하고자 하는 클라이언트에서 Join버튼을 눌러 Host의 세션에 참가
    (스팀 한 계정으로 테스트 불가능)
+
+
+
+DEV LOG
+---------
+https://bidullim.tistory.com/category/Unreal%EA%B3%B5%EB%B6%80
